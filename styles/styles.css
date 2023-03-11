@@ -1,0 +1,283 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  margin: 0;
+  font-family: rubik;
+  color: white;
+}
+body .head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+body .head .head__search {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+body .head .head__img {
+  display: flex;
+  justify-content: center;
+}
+body .pokemon--list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+body .pokemon--list .pokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgb(195, 128, 128);
+  color: black;
+  width: 200px;
+  height: 260px;
+}
+body .pokemon--list .pokemon .pokemon__header {
+  width: 90%;
+}
+body .pokemon--list .pokemon .pokemon__header .pokemon__header--p {
+  text-align: start;
+  padding-top: 10px;
+  font-size: 16px;
+}
+body .pokemon--list .pokemon .pokemon__header .pokemon__header--img {
+  text-align: center;
+  font-size: 28px;
+}
+body .pokemon--list .pokemon .image--poke {
+  width: 120px;
+  height: 120px;
+}
+body .pokemon--list .pokemon .pokemon__types {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 100px;
+}
+body .pokemon--list .pokemon .pokemon__types .pokemon__types--div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 80px;
+  gap: 5px;
+}
+body .pokemon--list .pokemon .pokemon__types .pokemon__types--div .pokemon__types--icon {
+  min-width: 16px;
+  min-height: 16px;
+}
+body .zoom {
+  transition: 0.2s;
+}
+body .zoom:hover {
+  transform: scale(1.1);
+}
+
+.container {
+  padding: 40px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 54px;
+}
+
+.normal--icon {
+  background-image: url(/assets/pokemonTypes/icons/normal.svg);
+  background-repeat: no-repeat;
+}
+
+.fighting--icon {
+  background-image: url(/assets/pokemonTypes/icons/fighting.svg);
+  background-repeat: no-repeat;
+}
+
+.flying--icon {
+  background-image: url(/assets/pokemonTypes/icons/flying.svg);
+  background-repeat: no-repeat;
+}
+
+.poison--icon {
+  background-image: url(/assets/pokemonTypes/icons/poison.svg);
+  background-repeat: no-repeat;
+}
+
+.ground--icon {
+  background-image: url(/assets/pokemonTypes/icons/ground.svg);
+  background-repeat: no-repeat;
+}
+
+.rock--icon {
+  background-image: url(/assets/pokemonTypes/icons/rock.svg);
+  background-repeat: no-repeat;
+}
+
+.bug--icon {
+  background-image: url(/assets/pokemonTypes/icons/bug.svg);
+  background-repeat: no-repeat;
+}
+
+.ghost--icon {
+  background-image: url(/assets/pokemonTypes/icons/ghost.svg);
+  background-repeat: no-repeat;
+}
+
+.steel--icon {
+  background-image: url(/assets/pokemonTypes/icons/steel.svg);
+  background-repeat: no-repeat;
+}
+
+.grass--icon {
+  background-image: url(/assets/pokemonTypes/icons/grass.svg);
+  background-repeat: no-repeat;
+}
+
+.electric--icon {
+  background-image: url(/assets/pokemonTypes/icons/electric.svg);
+  background-repeat: no-repeat;
+}
+
+.psychic--icon {
+  background-image: url(/assets/pokemonTypes/icons/psychic.svg);
+  background-repeat: no-repeat;
+}
+
+.ice--icon {
+  background-image: url(/assets/pokemonTypes/icons/ice.svg);
+  background-repeat: no-repeat;
+}
+
+.fairy--icon {
+  background-image: url(/assets/pokemonTypes/icons/fairy.svg);
+  background-repeat: no-repeat;
+}
+
+.dark--icon {
+  background-image: url(/assets/pokemonTypes/icons/dark.svg);
+  background-repeat: no-repeat;
+}
+
+.fire--icon {
+  background-image: url(/assets/pokemonTypes/icons/fire.svg);
+  background-repeat: no-repeat;
+}
+
+.water--icon {
+  background-image: url(/assets/pokemonTypes/icons/water.svg);
+  background-repeat: no-repeat;
+}
+
+.water--text {
+  background-image: url(/assets/pokemonTypes/texts/water.png);
+  width: 80px;
+  background-repeat: no-repeat;
+}
+
+.bug--text {
+  background-image: url(/assets/pokemonTypes/texts/bug.png);
+  width: 80px;
+  background-repeat: no-repeat;
+}
+
+.dragon--text {
+  background-image: url(/assets/pokemonTypes/texts/dragon.png);
+  width: 80px;
+  background-repeat: no-repeat;
+}
+
+.electric--text {
+  background-image: url(/assets/pokemonTypes/texts/electric.png);
+  width: 80px;
+  background-repeat: no-repeat;
+}
+
+.fairy--text {
+  background-image: url(/assets/pokemonTypes/texts/fairy.png);
+  width: 80px;
+  background-repeat: no-repeat;
+}
+
+.fighting--text {
+  background-image: url(/assets/pokemonTypes/texts/fighting.png);
+  width: 80px;
+  background-repeat: no-repeat;
+}
+
+.fire--text {
+  background-image: url(/assets/pokemonTypes/texts/fire.png);
+  width: 80px;
+  background-repeat: no-repeat;
+}
+
+.ghost--text {
+  background-image: url(/assets/pokemonTypes/texts/ghost.png);
+  width: 80px;
+  background-repeat: no-repeat;
+}
+
+.grass--text {
+  background-image: url(/assets/pokemonTypes/texts/grass.png);
+  width: 80px;
+  background-repeat: no-repeat;
+}
+
+.ice--text {
+  background-image: url(/assets/pokemonTypes/texts/ice.png);
+  width: 80px;
+  background-repeat: no-repeat;
+}
+
+.normal--text {
+  background-image: url(/assets/pokemonTypes/texts/normal.png);
+  width: 80px;
+  background-repeat: no-repeat;
+}
+
+.psychic--text {
+  background-image: url(/assets/pokemonTypes/texts/psychic.png);
+  width: 80px;
+  background-repeat: no-repeat;
+}
+
+.steel--text {
+  background-image: url(/assets/pokemonTypes/texts/steel.png);
+  width: 80px;
+  background-repeat: no-repeat;
+}
+
+.ground--text {
+  background-image: url(/assets/pokemonTypes/texts/ground.png);
+  width: 80px;
+  background-repeat: no-repeat;
+}
+
+.flying--text {
+  background-image: url(/assets/pokemonTypes/texts/flying.png);
+  width: 80px;
+  background-repeat: no-repeat;
+}
+
+.poison--text {
+  background-image: url(/assets/pokemonTypes/texts/poison.png);
+  width: 80px;
+  background-repeat: no-repeat;
+}
+
+.rock--text {
+  background-image: url(/assets/pokemonTypes/texts/rock.png);
+  width: 80px;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=styles.css.map */

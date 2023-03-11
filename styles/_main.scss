@@ -1,0 +1,103 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+
+    margin: 0;
+    font-family: rubik;
+    color: white;
+    .head{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 30px;
+        .head__search{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .head__img{
+        display: flex;
+        justify-content: center;
+
+        }
+    }
+    .pokemon--list{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+
+        .pokemon{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 20px;
+        background-color: rgb(195, 128, 128);
+        color: black;
+        width: 200px;
+        height: 260px;
+        
+            .pokemon__header{
+                width: 90%;
+                .pokemon__header--p{
+                    text-align: start;
+                    padding-top: 10px;
+                    font-size: 16px;
+
+                }
+                .pokemon__header--img{
+                    text-align: center;
+                    font-size: 28px;
+                }
+            }
+            .image--poke{
+                width: 120px;
+                height: 120px;
+            }
+            .pokemon__types{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                height: 100px;
+
+                .pokemon__types--div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 80px;
+                    gap: 5px;
+                    .pokemon__types--icon{
+                        min-width: 16px;
+                        min-height: 16px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .zoom{
+        transition: .2s;
+        
+    }
+   .zoom:hover{
+            transform: scale(1.1);
+    }
+
+  }
+  .container {
+    padding: 40px;
+    margin: 0 auto;
+  }
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 54px;
+  }
