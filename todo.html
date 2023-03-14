@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="pokedex.js" defer></script>
-    <link rel="stylesheet" href="./styles/styles.css"> 
-    <title>Document</title>
+    <title>TODO list</title>
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    
-    <header class="head">
+    <header>
         <div class="head__search">
             <a href="http://127.0.0.1:5501/index.html"><h4>Pokédex</h4></a>
             <a href="http://127.0.0.1:5501/todo.html"><h4>To Do List</h4></a>
@@ -18,30 +16,25 @@
         <div class="head__img">
              <a href="http://127.0.0.1:5501/index.html"><img src="./assets/pokedex-logo.svg" alt="" class="background--image">  </a>         
         </div>
-
-        <div class="filter">
-            
-         </div>
     </header>
     <main>
-        <div class="filter">
-            <div>
-                <p>Filter by type:</p>
-                <input type="text" class="filter--type">
-            </div>
-            <div>
-                <p>Filter by name:</p>
-                <input type="text" class="filter--name">  
-            </div>
+        <h3>To Do List</h3>
+        <div class="search">
+            <form>
+                <input type="text" placeholder="Add task...">
+                <button type="button" class="btn-add">+</button>
+            </form>
         </div>
-        <div class="pokemon--list">
-      </div>   
+        <div class="li-container">
+            <ul>
+                
+            </ul>
+        </div>
+        <div class="empty">
+            <p>All tasks are completed</p>
+        </div>
     </main>
-    <footer>
-        <div class="main--inf">
-
-        </div>
-    </footer>
-
+        
+    <script src="./todo.js"></script>
 </body>
 </html>
