@@ -39,7 +39,7 @@ const drawPoke = (content) => {
             <div class="pokemon__header--types">`;
     for (let i = 0; i < content.types.length; i++){
         //html += `<div class="pokemon__types--icon ${content.types[i].type.name}--icon"></div>`;
-        html += `<img src="./assets/pokemonTypes/icons/${content.types[i].type.name}.jpg" >`
+        html += `<img src="/assets/pokemonTypes/icons/${content.types[i].type.name}.jpg" >`
     }
     html += `</div>     
             </div>
@@ -50,7 +50,8 @@ const drawPoke = (content) => {
             <div class="pokemon__types">`;
 
     for (let i = 0; i < content.types.length; i++){
-                html += `<div class="pokemon__types--text ${content.types[i].type.name}--text "><img src="./assets/pokemonTypes/texts/${content.types[i].type.name}.jpg"></div>`
+                // html += `<div class="pokemon__types--text ${content.types[i].type.name}--text "></div>`
+                html += `<img src="./assets/pokemonTypes/texts/${content.types[i].type.name}.jpg">`
                 }
     html += `
             </div>
