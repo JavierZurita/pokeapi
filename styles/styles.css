@@ -197,7 +197,7 @@ body .flip--card .flip--card--inner {
   height: 100%;
   border-radius: 20px;
   background-color: rgb(229, 208, 208);
-  transition: all 550ms cubic-bezier(0.1, 0.22, 0.8, 1.13);
+  transition: all 450ms cubic-bezier(0.1, 0.22, 0.8, 1.13);
   transform-style: preserve-3d;
 }
 body .flip--card .flip--card--inner--front, body .flip--card .flip--card--inner--back {
