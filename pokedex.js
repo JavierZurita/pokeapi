@@ -50,7 +50,7 @@ const drawPoke = (content) => {
             <div class="pokemon__types">`;
 
     for (let i = 0; i < content.types.length; i++){
-                // html += `<div class="pokemon__types--text ${content.types[i].type.name}--text "></div>`
+                // html += `<div class="pokemon__types--text ${content.types[i].type.name}--text "></div>`  
                 html += `<img src="./assets/pokemonTypes/texts/${content.types[i].type.name}.jpg">`
                 }
     html += `
