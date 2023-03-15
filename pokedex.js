@@ -2,7 +2,7 @@ let baseUrl = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=151";
 
 const divPokemonList$$ = document.querySelector('.pokemon--list');
 const inputName$$ = document.querySelector('.filter--name');
-const inputType$$ = document.querySelector('.filter--type');
+const inputType$$ = document.querySelector('#filter--type');
 const btnnext$$ = document.querySelector('.btn--next');
 const pokeArray = [];
 
@@ -104,8 +104,6 @@ const drawPoke = (content) => {
 
     divPokemonList$$.appendChild(divPokemon$$);
 }
-
-
 
 const filter = () =>{
     divPokemonList$$.innerHTML="";

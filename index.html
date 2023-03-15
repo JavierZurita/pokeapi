@@ -14,6 +14,8 @@
         <div class="head__search">
             <a href="http://127.0.0.1:5501/index.html"><h4>Pokédex</h4></a>
             <a href="http://127.0.0.1:5501/todo.html"><h4>To Do List</h4></a>
+            <a href="http://127.0.0.1:5501/clicker2.html"><h4>Clicker</h4></a>
+            
         </div>
         <div class="head__img">
              <a href="http://127.0.0.1:5501/index.html"><img src="./assets/pokedex-logo.svg" alt="" class="background--image">  </a>         
@@ -26,8 +28,26 @@
     <main>
         <div class="filter">
             <div>
-                <p>Filter by type:</p>
-                <input type="text" class="filter--type">
+                <label for="pokemon_type">Select a Pokemon type:</label>
+                    <select id="filter--type" name="pokemon_type">
+                    <option value="">All</option>
+                    <option value="grass">Grass</option>
+                    <option value="fire">Fire</option>
+                    <option value="water">Water</option>
+                    <option value="electric">Electric</option>
+                    <option value="psychic">Psychic</option>
+                    <option value="flying">Flying</option>
+                    <option value="ground">Ground</option>
+                    <option value="rock">Rock</option>
+                    <option value="poison">Poison</option>
+                    <option value="ghost">Ghost</option>
+                    <option value="steel">Steel</option>
+                    <option value="fairy">Fairy</option>
+                    <option value="fighting">Fighting</option>
+                    <option value="dark">Dark</option>
+                    <option value="ice">Ice</option>
+                    <option value="bug">Bug</option>
+                    </select>
             </div>
             <div>
                 <p>Filter by name:</p>

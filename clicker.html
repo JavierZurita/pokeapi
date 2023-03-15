@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="pokedex.js" defer></script>
+    <script src="clicker.js" defer></script>
     <link rel="stylesheet" href="./styles/styles.css"> 
     <title>Pokedex</title>
 </head>
@@ -14,23 +14,21 @@
         <div class="head__search">
             <a href="http://127.0.0.1:5501/index.html"><h4>Pokédex</h4></a>
             <a href="http://127.0.0.1:5501/todo.html"><h4>To Do List</h4></a>
+            <a href="http://127.0.0.1:5501/clicker.html"><h4>Clicker</h4></a>           
         </div>
         <div class="head__img">
              <a href="http://127.0.0.1:5501/index.html"><img src="./assets/pokedex-logo.svg" alt="" class="background--image">  </a>         
         </div>
-
     </header>
-    <main>
-        <div class="filter">
-            <div>
-                <p>Select pokemon 1:</p>
-                <input type="text" class="filter--poke1">
-            </div>
-            <div>
-                <p>Select pokemon 2:</p>
-                <input type="text" class="filter--poke2">  
-            </div>
-        </div>
+    <main class="clicker">
+        <h1>Pokémon Clicker</h1>
+        <p>Press the button to chatch the Pokemon</p>
+        <button class="catch-button">
+            <img src="./assets/clicker/Pokeball.webp" alt="" class="pokeball">
+        </button>
+        <p>Tienes <span class="catch-count">0</span> Pokémon atrapados.</p>
+        <p class="message"></p>
+        <div class="div--img"></div>
     </main>
 </body>
 </html>

@@ -45,9 +45,7 @@ body .filter {
 body .filter div {
   display: flex;
   flex-direction: row;
-  width: 80%;
-  align-items: center;
-  justify-content: space-around;
+  width: 60%;
 }
 body .filter p {
   font-size: 20px;
@@ -56,15 +54,6 @@ body .filter p {
 }
 body .filter input {
   height: 20px;
-  width: 40%;
-}
-body .filter label {
-  height: 20px;
-  width: 60%;
-  font-size: 20px;
-}
-body .filter select {
-  height: 30px;
   width: 40%;
 }
 body .pokemon--list {
@@ -287,18 +276,25 @@ body main .invisible {
   display: none;
 }
 
-.clicker button {
+.clicker {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.clicker .clicker__center button {
   width: 200px;
   height: 200px;
   margin: 25px;
+  border: 0px;
 }
-.clicker button img {
+.clicker .clicker__center button img {
   width: 200px;
 }
-.clicker h1 {
+.clicker .clicker__center h1 {
   margin: 25px;
 }
-.clicker p {
+.clicker .clicker__center p {
   font-size: 26px;
 }
 .clicker .div--img {
@@ -310,82 +306,4 @@ body main .invisible {
 .clicker .div--img img {
   width: 80px;
   height: 80px;
-}
-
-.clicker {
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 10px;
-}
-.clicker .clicker__left {
-  border: 1px solid black;
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 25px;
-}
-.clicker .clicker__left button {
-  width: 80%;
-  height: 200px;
-  margin: 25px;
-  border: 0px;
-}
-.clicker .clicker__left button img {
-  width: 100%;
-}
-.clicker .clicker__left h1 {
-  margin: 25px;
-}
-.clicker .clicker__left p {
-  font-size: 26px;
-}
-.clicker .clicker__center {
-  border: 1px solid black;
-  width: 60%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 25px;
-}
-.clicker .clicker__center img {
-  width: 40px;
-  height: 40px;
-}
-.clicker .clicker__right {
-  padding: 20px;
-  border: 1px solid black;
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.clicker .clicker__right p {
-  margin-bottom: 30px;
-}
-.clicker .clicker__right .upgrade {
-  width: -moz-fit-content;
-  width: fit-content;
-  border: 1px solid black;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 80%;
-}
-.clicker .clicker__right .upgrade img {
-  width: 40px;
-  height: 100%;
-}
-.clicker .clicker__right .upgrade p {
-  font-size: 16px;
-}
-
-.final h2 {
-  font-size: 40px;
-  text-align: center;
-  padding-top: 200px;
 }/*# sourceMappingURL=styles.css.map */

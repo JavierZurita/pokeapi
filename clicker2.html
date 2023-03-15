@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="clicker2.js" defer></script>
+    <link rel="stylesheet" href="./styles/styles.css"> 
+    <title>Pokedex</title>
+</head>
+<body>
+    
+    <header class="head">
+        <div class="head__search">
+            <a href="http://127.0.0.1:5501/index.html"><h4>Pokédex</h4></a>
+            <a href="http://127.0.0.1:5501/todo.html"><h4>To Do List</h4></a>
+            <a href="http://127.0.0.1:5501/clicker2.html"><h4>Clicker</h4></a>           
+        </div>
+        <div class="head__img">
+             <a href="http://127.0.0.1:5501/index.html"><img src="./assets/pokedex-logo.svg" alt="" class="background--image">  </a>         
+        </div>
+    </header>
+    <main>
+        <h1>Pokémon Clicker</h1>
+        <div class="clicker">
+            <div class="clicker__left">
+                <p>Press the button to catch Pokemon</p>
+                <button class="catch-button" onclick="zoomIn(this)">
+                    <img src="./assets/clicker/Pokeball.webp" alt="" class="pokeball">
+                </button>
+                <p>You have <span class="catch-count">0</span> Poke.</p>
+
+            </div>   
+            <div class="clicker__center">
+                <p class="message"></p>
+
+            </div>
+            
+            <div class="clicker__right">
+                <p>Upgrade</p>
+                <button type="button" class="upgrade">
+                    <img src="./assets/clicker/superball.png" alt="">
+                    <p>Clicks are twice as efficient</p>
+                    <p>Cost: 10 poke</p>
+                </button>
+                <button class="upgrade">
+                    <img src="./assets/clicker/ultraball.png" alt="">
+                    <p>Clicks are twice as efficient</p>
+                    <p>Cost: 20 poke</p>
+                </button>
+                <button class="upgrade">
+                    <img src="./assets/clicker/masterball.jpg" alt="">
+                    <p>Clicks are twice as efficient</p>
+                    <p>Cost: 40 poke</p>
+                </button>
+            </div>
+        </div>
+        
+    </main>
+</body>
+</html>
