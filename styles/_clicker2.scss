@@ -11,13 +11,14 @@
         flex-direction: column;
         align-items: center;
         padding-top: 25px;
+        gap: 30px;
 
         button{
-            width: 80%;
+            width: 60%;
+            height: 180px;
             margin: 25px;
             border: 0px;
-            gap: 30px;
-            transition: transform 0.3s ease-out;
+            transition: transform 0.05s ease-out;
             img{
                 width: 70%;
                 height: 100%;
@@ -57,10 +58,8 @@
         .upgrade{
             width: fit-content;
             border: 1px solid black;
-            height: fit-content;
+            height: 40px;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
             width: 80%;
             
             img{
