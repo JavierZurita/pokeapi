@@ -1,4 +1,13 @@
-let baseUrl = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=1008";
+const urlGen1 = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=151";
+const urlGen2 = "https://pokeapi.co/api/v2/pokemon?offset=151&limit=100";
+const urlGen3 = "https://pokeapi.co/api/v2/pokemon?offset=251&limit=135";
+const urlGen4 = "https://pokeapi.co/api/v2/pokemon?offset=386&limit=108";
+const urlGen5 = "https://pokeapi.co/api/v2/pokemon?offset=494&limit=155";
+const urlGen6 = "https://pokeapi.co/api/v2/pokemon?offset=649&limit=72";
+const urlGen7 = "https://pokeapi.co/api/v2/pokemon?offset=721&limit=88";
+const urlGen8 = "https://pokeapi.co/api/v2/pokemon?offset=809&limit=96";
+const urlGen9 = "https://pokeapi.co/api/v2/pokemon?offset=905&limit=104";
+
 
 const divPokemonList$$ = document.querySelector('.pokemon--list');
 const inputName$$ = document.querySelector('.filter--name');
@@ -7,24 +16,26 @@ const inputGen$$ = document.querySelector('#filter--gen');
 const btnNxt$$ = document.querySelector('.btn--nxt');
 const btnPrev$$ = document.querySelector('.btn--prev');
 let page = 1;
-const pokeArray = [];
+let pokeArray = [];
 
 const init = async (url) => {
     btnPrev$$.className = "empty";
+    loadPokes(url);
+    // console.log(pokeArray);
+}
+
+const loadPokes = async (url) => {
+    pokeArray= [];
     const response = await fetch(url);
     const responseJson = await response.json();
-    
+
     for (let i = 0; i < responseJson.results.length; i++) {
         
         const response1 = await fetch(responseJson.results[i].url);
         const responseJson1 = await response1.json();
         pokeArray.push(responseJson1);
-        if(i<151){
-            drawPoke(pokeArray[i]);
-        }
+        drawPoke(pokeArray[i]);
     }
-
-    console.log(pokeArray);
 }
 
 const drawPoke = (content) => {
@@ -111,7 +122,7 @@ const drawPoke = (content) => {
 }
 
 const filter = () => {
-    inputGen$$.value = 0;
+    
     divPokemonList$$.innerHTML="";
 
     for (let i = 0; i < pokeArray.length; i++) {
@@ -130,81 +141,64 @@ const filter = () => {
 
 const filterGen = () => {
     inputType$$.value = "";
+    inputName$$.value = "";
     divPokemonList$$.innerHTML="";
     console.log(inputGen$$.value);
 
     if(inputGen$$.value == 1){
         page == 1;
-            btnNxt$$.className = "btn--nxt";
-            btnPrev$$.className = "empty";
-            for(let i = 0; i < 151; i++){ //check this
-                drawPoke(pokeArray[i]);
-            }
+        btnNxt$$.className = "btn--nxt";
+        btnPrev$$.className = "empty";
+        loadPokes(urlGen1);
+
     } else if (inputGen$$.value == 2 ){
         btnPrev$$.className = "btn--prev";
         btnNxt$$.className = "btn--nxt";
+        page == 2;
+        loadPokes(urlGen2);
 
-        console.log("Enrta 2");
-
-            page == 2;
-            for(let i = 151; i < 251; i++){ //check this
-                drawPoke(pokeArray[i]);
-            }
     } else if (inputGen$$.value == 3){
         btnPrev$$.className = "btn--prev";
         btnNxt$$.className = "btn--nxt";
+        page = 3;
+        loadPokes(urlGen3);
 
-            page == 3;
-            for(let i = 251; i < 386; i++){
-                drawPoke(pokeArray[i]);
-            }
     } else if (inputGen$$.value == 4){
         btnPrev$$.className = "btn--prev";
         btnNxt$$.className = "btn--nxt";
-
         page == 4;
-        for(let i = 386; i < 494; i++){
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen4);
+
     } else if (inputGen$$.value == 5){
         btnPrev$$.className = "btn--prev";
         btnNxt$$.className = "btn--nxt";
-
         page = 5;
-            for(let i = 494; i < 649; i++){
-                drawPoke(pokeArray[i]);
-            }
+        loadPokes(urlGen5);
+
     } else if (inputGen$$.value == 6){
         btnPrev$$.className = "btn--prev";
         btnNxt$$.className = "btn--nxt";
-
         page = 6;    
-            for(let i = 649; i < 721; i++){
-                drawPoke(pokeArray[i]);
-            }
+        loadPokes(urlGen6);
+
     } else if (inputGen$$.value == 7){
         btnPrev$$.className = "btn--prev";
         btnNxt$$.className = "btn--nxt";
-
         page = 7;
-        for(let i = 721; i < 809; i++){
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen7);
+
     } else if (inputGen$$.value == 8){
         btnPrev$$.className = "btn--prev";
         btnNxt$$.className = "btn--nxt";
         page = 8;
-            for(let i = 809; i < 905; i++){
-                drawPoke(pokeArray[i]);
-            }
-    } else if (inputGen$$.value == 9){
-            btnPrev$$.className = "btn--prev";
-             btnNxt$$.className = "empty";
-            page = 9;
+        loadPokes(urlGen8);
 
-            for(let i = 905; i < 1009; i++){
-                drawPoke(pokeArray[i]);
-            }
+    } else if (inputGen$$.value == 9){
+        btnPrev$$.className = "btn--prev";
+        btnNxt$$.className = "empty";
+        page = 9;
+        loadPokes(urlGen9);
+
     }else if (inputGen$$.value == 0 ){
             page == 1;
         btnNxt$$.className = "btn--nxt";
@@ -221,45 +215,29 @@ const nextPage = () => {
     if(page == 2){
         btnPrev$$.className = "btn--prev";
         divPokemonList$$.innerHTML = "";
-        for(let i = 151; i < 251; i++){ //check this
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen2);
     } else if (page == 3){
         divPokemonList$$.innerHTML = "";
-        for(let i = 251; i < 386; i++){
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen3);
     } else if (page == 4){
         divPokemonList$$.innerHTML = "";
-        for(let i = 386; i < 494; i++){
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen4);
     } else if (page == 5){
         divPokemonList$$.innerHTML = "";
-        for(let i = 494; i < 649; i++){
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen5);
     } else if (page == 6){
         divPokemonList$$.innerHTML = "";
-        for(let i = 649; i < 721; i++){
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen6);
     } else if (page == 7){
         divPokemonList$$.innerHTML = "";
-        for(let i = 721; i < 809; i++){
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen7);
     } else if (page == 8){
         divPokemonList$$.innerHTML = "";
-        for(let i = 809; i < 905; i++){
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen8);
     } else if (page == 9){
         divPokemonList$$.innerHTML = "";
         btnNxt$$.className = "empty";
-        for(let i = 905; i < 1009; i++){
-            drawPoke(pokeArray[i]);
-        } 
+        loadPokes(urlGen9);
     }
     window.scrollTo({top:0})
 }
@@ -271,57 +249,48 @@ const prevPage = () => {
     if(page == 1){
         btnPrev$$.className = "empty";
         divPokemonList$$.innerHTML = "";
-        for(let i = 0; i < 151; i++){ //check this
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen1);
+
     } else if(page == 2){
         divPokemonList$$.innerHTML = "";
-        for(let i = 151; i < 251; i++){ //check this
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen2);
+
     } else if (page == 3){
         divPokemonList$$.innerHTML = "";
-        for(let i = 251; i < 386; i++){
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen3);
+
     } else if (page == 4){
         divPokemonList$$.innerHTML = "";
-        for(let i = 386; i < 494; i++){
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen4);
+
     } else if (page == 5){
         divPokemonList$$.innerHTML = "";
-        for(let i = 494; i < 649; i++){
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen5);
+
     } else if (page == 6){
         divPokemonList$$.innerHTML = "";
-        for(let i = 649; i < 721; i++){
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen6);
+
     } else if (page == 7){
         divPokemonList$$.innerHTML = "";
-        for(let i = 721; i < 809; i++){
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen7);
+
     } else if (page == 8){
         btnNxt$$.className = "btn--nxt";
         divPokemonList$$.innerHTML = "";
-        for(let i = 809; i < 905; i++){
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen8);
+
     } else if (page == 9){
         divPokemonList$$.innerHTML = "";
         btnNxt$$.className = "empty";
-        for(let i = 905; i < 1009; i++){
-            drawPoke(pokeArray[i]);
-        }
+        loadPokes(urlGen9);
+
     }
     window.scrollTo({top:0})
 
 }
 
-init(baseUrl);
+init(urlGen1);
 
 inputGen$$.addEventListener('input',filterGen);
 inputName$$.addEventListener('input',filter);
